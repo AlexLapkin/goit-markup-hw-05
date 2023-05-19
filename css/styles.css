@@ -120,10 +120,7 @@ text-transform: uppercase;}
     letter-spacing: 0.02em;
     display: block;
     padding: 24px 0;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--Меняем цвет ссылок при наведении--*/
@@ -151,7 +148,6 @@ color: var(--link-active-color);}
  background-color: #404BBF;
  margin: auto;
  position: absolute;
- /*--margin-top: 20px;--*/
  }
 
 /*--Прижимаем секцию почты и телефона к правому краю--*/
@@ -178,10 +174,8 @@ letter-spacing: 0.02em;
 text-decoration: none;
 display: block;
 padding: 24px 0;
-transition-property: color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;}
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*--Меняем цвет ссылок при наведении--*/
 .cont-link:hover,
@@ -237,10 +231,8 @@ margin-top: 48px;
 padding: 16px 32px 16px 32px;
 border-radius: 4px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;}
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*--Меняем цвет кнопок при навдении--*/
 .main-btn:hover,
@@ -368,7 +360,6 @@ margin-bottom: 8px}
 gap: 24px;
 justify-content: center;}
 
-
 /*--Ячейка каждой иконки линка соцсети--*/
 .social-link
 {width: 40px;
@@ -385,10 +376,7 @@ border-radius: 50%;
 align-items: center;
 justify-content: center;
 color: #FFFFFF;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--Меняем цвет при наведении --*/
@@ -536,10 +524,8 @@ border-top: none;}
 /*--Делаем ссылку блочным элементом--*/
 .pf-link
 {display: block;
- transition-property: box-shadow;
- transition-duration: 250ms;
- transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- transition-delay: 0;}
+ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*--Эффект тени при наведении на карточку Портфолио--*/
 .pf-link:hover,
@@ -651,11 +637,8 @@ margin-bottom: 16px;
      align-items: center;
      justify-content: center;
      color: #FFFFFF;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
- }
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
  /*--Меняем цвет при наведении на ссылку футера--*/
  .social-link-a-foot:hover,
