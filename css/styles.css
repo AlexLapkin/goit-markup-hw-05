@@ -533,19 +533,16 @@ border-top: none;}
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+/*--Делаем ховер и фокус на всю карточку (текст выезжает снизу)--*/
+.pf-link:hover .text-overlay,
+.pf-link:focus .text-overlay 
+{ transform: translateY(0);}
+
 /*--Описываем класс родителя текста оверлея--*/
 .card-overlay
 {position: relative;
  overflow: hidden;
  }
-
-/*--Делаем ховер на текст (выезжает снизу)--*/
-.card-overlay:hover .text-overlay
-{ transform: translateY(0);  }
-
-/*--Делаем фокус на текст (выезжает снизу)--*/
-.card-overlay:focus .text-overlay 
-{ transform: translateY(0); }
 
 /*--Описываем текст оверлей--*/
 .text-overlay
