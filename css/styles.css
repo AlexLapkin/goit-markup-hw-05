@@ -539,11 +539,13 @@ border-top: none;}
  overflow: hidden;
  }
 
-/*--Делаем ховер и фокус на текст (выезжает снизу)--*/
-.card-overlay:hover .text-overlay,
-.card-overlay:focus .text-overlay
-{transform: translateY(0);
-}
+/*--Делаем ховер на текст (выезжает снизу)--*/
+.card-overlay:hover .text-overlay
+{ transform: translateY(0);  }
+
+/*--Делаем фокус на текст (выезжает снизу)--*/
+.card-overlay:focus .text-overlay 
+{ transform: translateY(0); }
 
 /*--Описываем текст оверлей--*/
 .text-overlay
