@@ -141,7 +141,6 @@ color: var(--link-active-color);}
  display: block;   
  width: 48px;
  height: 4px;
- top: 44px;
  left: 0;
  bottom: -1px;
  border-radius: 2px;
@@ -445,7 +444,6 @@ color: var(--link-active-color);}
  display: block; 
  width: 66px;
  height: 4px;
- top: 44px;
  border-radius: 2px;
  background-color: #404BBF;
  margin: auto;
