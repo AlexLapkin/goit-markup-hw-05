@@ -132,6 +132,12 @@ text-transform: uppercase;}
 {color: var(--link-active-color);
  }
 
+/*--Задаем ссылке страницы Studio - relative--*/
+.current-page-main
+{position: relative;
+color: var(--link-active-color);}
+
+
 /*--Делаем подчеркивание текущей страницы при помощи псевдоэлемента after--*/
 .current-page-main::after
 {content: '';
@@ -139,11 +145,13 @@ text-transform: uppercase;}
  width: 48px;
  height: 4px;
  top: 44px;
+ left: 0;
+ bottom: -1px;
  border-radius: 2px;
  background-color: #404BBF;
  margin: auto;
  position: absolute;
- margin-top: 20px;
+ /*--margin-top: 20px;--*/
  }
 
 /*--Прижимаем секцию почты и телефона к правому краю--*/
@@ -229,7 +237,7 @@ margin-top: 48px;
 padding: 16px 32px 16px 32px;
 border-radius: 4px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-transition-property: color, background-color, box-shadow;
+transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-delay: 0;}
@@ -425,10 +433,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: #8e8f99;
-transition-property: color, border-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;}
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .customer-link-a:hover,
 .customer-link-a:focus
@@ -438,6 +445,11 @@ color: #404bbf;}
 /*--Класс для заливки иконок логотипов компаний--*/
 .icon-customer 
 {fill: currentColor;}
+
+/*--Описываем ссылку текущей страницы Портфолио--*/
+.current-page-port
+{position: relative;
+color: var(--link-active-color);}
 
 /*--Делаем подчеркивание страницы Портфолио псевдоэлементом--*/
 .current-page-port::after
@@ -450,7 +462,8 @@ color: #404bbf;}
  background-color: #404BBF;
  margin: auto;
  position: absolute;
- margin-top: 20px;
+ left: 0;
+ bottom: -1px;
 }
 
 /*--Задание паддингов для секции Портфолио--*/
@@ -479,10 +492,10 @@ border-radius: 4px;
 cursor: pointer;
 padding: 12px 24px 12px 24px;
 display: block;
-transition-property: color, background-color, border, box-shadow;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;}
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 /*--Меняем цвет кнопок Портфолио при наведении--*/
 .btn:hover,
@@ -543,7 +556,7 @@ border-top: none;}
  }
 
 /*--Делаем ховер и фокус на текст (выезжает снизу)--*/
- .card-overlay:hover .text-overlay,
+.card-overlay:hover .text-overlay,
 .card-overlay:focus .text-overlay
 {transform: translateY(0);
 }
@@ -558,18 +571,13 @@ height: 100%;
 overflow: auto;
 transform: translateY(100%);
 background-color: #4D5AE5;
-/*--transition-property:--*/
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 color: #F4F4FD;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-padding-top: 40px;
-padding-left: 32px;
-padding-right: 32px;
+padding: 40px 32px;
 }
 
 /*--Данные Футера--*/
@@ -668,7 +676,9 @@ margin-bottom: 16px;
  left: 0;
  width: 100%;
  height: 100%;
- background-color: rgba(46, 47, 66, 0.4);   
+ background-color: rgba(46, 47, 66, 0.4);
+ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--Дополнительный класс бекдропа--*/
@@ -681,23 +691,25 @@ margin-bottom: 16px;
 /*--Описание модального окна--*/
 .modal
 {width: 408px;
- height: 584px;
+ min-height: 576px;
  background-color: #FCFCFC;
  position: absolute;
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- transition-duration: 250ms;
- transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- transition-delay: 0;
+ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+ border-radius: 4px;       
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--Описание кнопки закрытия модального окна--*/
 .modal-close-btn
 {
 position: absolute;
-top: 0;
-right: 0;
+top: 24px;
+right: 24px;
 display: flex;
 align-items: center;
 justify-content: center;    
@@ -706,4 +718,25 @@ padding: 0;
 width: 24px;
 height: 24px;
 border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/*--Поведение кнопки закрытия модального окна при ховере, фокусе--*/
+.modal-close-btn:hover,
+.modal-close-btn:focus
+{background-color: #404BBF;
+ border: none;
+}
+
+/*-Описание иконки закрытия модального окна-*/
+.modal-close-btn-icon
+{fill: #2E2F42;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+/*--Меняем цвет иконки при ховере/фокусе модальной кнопки закрытия--*/
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon
+{fill: #fff;}
